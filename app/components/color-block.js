@@ -8,8 +8,10 @@ app.controller("colorBlockController", function ($timeout) {
     let me = this;
     this.bgc = "red";
 
-    function changeColor(){
+    (function changeColor(){
         me.bgc = (me.bgc === "red") ? "green" : "red";
-        $timeout.set(1000).then(changeColor());
-    }
+        $timeout(1000).then(changeColor);
+    })();
+
+
 });
