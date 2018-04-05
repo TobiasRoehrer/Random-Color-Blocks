@@ -4,12 +4,13 @@ app.component("colorBlock", {
     bindings: {}
 });
 
-app.controller("colorBlockController", function ($timeout) {
+app.controller("colorBlockController", function ($timeout, color) {
     let me = this;
-    this.bgc = "red";
+    this.bgc;
 
     (function changeColor(){
-        me.bgc = (me.bgc === "red") ? "green" : "red";
+        //me.bgc = (me.bgc === "red") ? "green" : "red";
+        me.bgc = new color().string();
         $timeout(1000).then(changeColor);
     })();
 
