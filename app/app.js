@@ -1,7 +1,7 @@
 "use strict";
 
 // Einziges Modul dieser App und seine Abhängigkeiten
-var app = angular.module("todoliste", [ "ngResource", "ngMessages", "ngLocale", "ngSanitize",
+var app = angular.module("Vorlage", [ "ngResource", "ngMessages", "ngLocale", "ngSanitize",
     "ngAnimate", "ngMaterial", "ui.router" ]);
 
 
