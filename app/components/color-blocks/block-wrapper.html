@@ -1,3 +1,8 @@
-<div>
-
+<div layout="column"
+layout-align="start stretch">
+    <div ng-repeat="i in $ctrl.amountY track by $index"
+         layout="row"
+         layout-align="start stretch">
+        <color-block ng-repeat="i in $ctrl.amountX track by $index"></color-block>
+    </div>
 </div>

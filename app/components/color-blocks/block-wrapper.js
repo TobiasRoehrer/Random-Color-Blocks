@@ -4,8 +4,9 @@ app.component("blockWrapper", {
     bindings: {}
 });
 
-app.controller("blockWrapperController", function () {
-
+app.controller("blockWrapperController", function ($stateParams) {
+    this.amountX = Array($stateParams.amountX).fill("");
+    this.amountY = Array($stateParams.amountY).fill("");
 });
 
 app.config(function ($stateProvider) {
