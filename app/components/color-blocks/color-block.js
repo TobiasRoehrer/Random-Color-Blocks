@@ -1,17 +1,23 @@
 app.component("colorBlock", {
     templateUrl: "components/color-blocks/color-block.html",
     controller: "colorBlockController",
-    bindings: {}
+    bindings: {
+        time:"<"
+    }
 });
 
 app.controller("colorBlockController", function ($timeout, color) {
     let me = this;
-    this.bgc;
+    this.bgc = new color().toString();
 
-    (function changeColor(){
+    this.$onInit = function(){
+        me.time = (me.time) ? me.time : Math.floor(Math.random()*(2500-500+1)+500);
+        me.changeColor();
+    }
+
+    this.changeColor = function(){
         me.bgc = new color().string();
-        $timeout(1000).then(changeColor);
-    })();
-
+        $timeout(me.time).then(me.changeColor);
+    }
 
 });
