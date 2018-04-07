@@ -19,3 +19,7 @@ color-block div{
     text-transform: none;
     vertical-align: middle;
 }
+
+welcome md-card{
+    width: 70%;
+}
