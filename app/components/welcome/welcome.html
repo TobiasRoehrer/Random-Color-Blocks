@@ -9,7 +9,7 @@
         <md-card-content>
             <ng-form name="$ctrl.form"
                      layout="column"
-            layout-align="space-between stretch">
+                     layout-align="space-between stretch">
                 <div layout="row"
                      layout-align="space-around center">
                     <md-input-container flex="40">
@@ -32,7 +32,9 @@
                 </div>
                 <div layout="row"
                      layout-align="center center">
-                    <md-button class="myButton">And Go!</md-button>
+                    <md-button class="myButton"
+                               ng-disabled="$ctrl.form.$invalid"
+                               ui-sref="color-block({amountY: $ctrl.amountY, amountX: $ctrl.amountX})">And Go!</md-button>
                 </div>
             </ng-form>
         </md-card-content>
