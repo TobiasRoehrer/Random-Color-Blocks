@@ -1,3 +1,40 @@
 <div>
-
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Welcome!</span>
+                <span class="md-subhead">You can now choose, how many Colorblocks will appear vertically and horizontally, then just click go!</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <ng-form name="$ctrl.form"
+                     layout="column"
+            layout-align="space-between stretch">
+                <div layout="row"
+                     layout-align="space-around center">
+                    <md-input-container flex="40">
+                        <label>Amount of Colorblocks vertically</label>
+                        <input name="amountY"
+                               type="number"
+                               min="1"
+                               required
+                               ng-model="$ctrl.amountY">
+                    </md-input-container>
+                    <div flex="10"></div>
+                    <md-input-container flex="40">
+                        <label>Amount of Colorblocks horizontally</label>
+                        <input name="amountX"
+                               type="number"
+                               min="1"
+                               required
+                               ng-model="$ctrl.amountX">
+                    </md-input-container>
+                </div>
+                <div layout="row"
+                     layout-align="center center">
+                    <md-button class="myButton">And Go!</md-button>
+                </div>
+            </ng-form>
+        </md-card-content>
+    </md-card>
 </div>

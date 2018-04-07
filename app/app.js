@@ -4,6 +4,10 @@
 var app = angular.module("Vorlage", [ "ngResource", "ngMessages", "ngLocale", "ngSanitize",
     "ngAnimate", "ngMaterial", "ui.router" ]);
 
+//Standard-State
+app.config(function($urlRouterProvider) {
+    $urlRouterProvider.otherwise("welcome");
+});
 
 // Einstellungen für Debugging
 app.config(function($logProvider, $compileProvider, $mdAriaProvider, $qProvider) {

@@ -1,8 +1,13 @@
 .md-button {
-  vertical-align: super;
+    vertical-align: super;
 }
 
 color-block div{
-  height: 100px;
-  width: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.myButton {
+    text-transform: none;
+    vertical-align: middle;
 }
