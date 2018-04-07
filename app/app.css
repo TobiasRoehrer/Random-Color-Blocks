@@ -23,3 +23,7 @@ color-block div{
 welcome md-card{
     width: 70%;
 }
+
+.md-input-focused > label{
+    overflow: visible !important;
+}

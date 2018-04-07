@@ -12,24 +12,38 @@
                      layout="column"
                      layout-align="space-between stretch">
                 <div layout="row"
-                     layout-align="space-around center">
-                    <md-input-container flex="40">
-                        <label>Amount of Colorblocks vertically</label>
-                        <input name="amountY"
-                               type="number"
-                               min="1"
-                               required
-                               ng-model="$ctrl.amountY">
-                    </md-input-container>
-                    <div flex="10"></div>
-                    <md-input-container flex="40">
-                        <label>Amount of Colorblocks horizontally</label>
-                        <input name="amountX"
-                               type="number"
-                               min="1"
-                               required
-                               ng-model="$ctrl.amountX">
-                    </md-input-container>
+                     layout-align="space-around start">
+                    <div layout="column"
+                         layout-align="space-around stretch"
+                         flex>
+                        <md-input-container flex>
+                            <label>Amount of Colorblocks vertically</label>
+                            <input name="amountY"
+                                   type="number"
+                                   min="1"
+                                   required
+                                   ng-model="$ctrl.amountY">
+                        </md-input-container>
+                        <div flex="10"></div>
+                        <md-input-container flex>
+                            <label>Amount of Colorblocks horizontally</label>
+                            <input name="amountX"
+                                   type="number"
+                                   min="1"
+                                   required
+                                   ng-model="$ctrl.amountX">
+                        </md-input-container>
+                    </div>
+                    <div layout="column"
+                         layout-align="space-around stretch"
+                         flex>
+                        <md-input-container flex>
+                            <label>Amount of Milliseconds before colorchange. If empty: random.</label>
+                            <input type="number"
+                                   min="100"
+                                   ng-model="$ctrl.time">
+                        </md-input-container>
+                    </div>
                 </div>
                 <div layout="row"
                      layout-align="center center">
